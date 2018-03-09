@@ -1,0 +1,154 @@
+<html>
+<head>
+	<title>Batavia Back and Neck</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+	
+	
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			height: 100%;
+			background-color: #141414;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+		#box {
+			background-color: #141414;
+			color: white;
+			width: 100%;
+			height: 100%;
+			position: relative;
+			text-align: center;
+		}
+		#center{
+			width: 180px;
+			height: 100%;
+			margin: 0 auto;
+			text-align: center;
+			background-color: blue;
+			padding-top: 23%;
+		}
+		#center h1:hover{
+			color: gray;
+		}
+		#center h1 {
+			width: auto;
+			cursor: pointer;
+			vertical-align: middle;
+		}
+		#one, #two, #three, #four {
+			position: absolute;
+			width: 150px;
+			background-color: white;
+			height: 50px;
+			border-radius: 5px;
+		}
+		a {
+			text-decoration: none;
+			color: blue;
+			font-size: 1.5rem;
+		}
+		#one {
+			top: 425px;
+			left: -999px;
+		}
+		#two {
+			top: 525px;
+			left: -999px;
+		}
+		#three {
+			top: 425px;
+			right: -999px;
+		}
+		#four {
+			top: 525px;
+			right: -999px;
+		}
+	</style>
+	
+	<script>
+		$(document).ready(function(){
+			var $1 = $('#one');
+			var $2 = $('#two');
+			var $3 = $('#three');
+			var $4 = $('#four');
+		
+			var $c = $('#center h1');
+			
+			
+			tween1 = TweenLite.to($1, 0.7, {left: '700px', ease: Elastic.easeOut.config(1,0.75), paused: true});
+			tween2 = TweenLite.to($2, 0.5, {left: '700px', ease: Elastic.easeOut.config(1,0.75), paused: true});
+			tween3 = TweenLite.to($3, 0.9, {right: '700px', ease: Elastic.easeOut.config(1,0.75), paused: true});
+			tween4 = TweenLite.to($4, 0.8, {right: '700px', ease: Elastic.easeOut.config(1,0.75), paused: true});
+			
+			
+			$('#center h1').click(function(){
+				tween1.play();
+				tween2.play();
+				tween3.play();
+				tween4.play();
+			});
+			
+		});
+	
+	
+	</script>
+</head>
+<body>
+	<div id="box">
+		<nav id="nav">
+			<div id="center">
+				<h1>Batavia <br/> Back and Neck Center</h1>
+			</div>
+			<a href="#" id="one">Home</a>
+			<a href="#" id="two">About</a>
+			<a href="#" id="three">What to Expect</a>
+			<a href="#" id="four">Contact</a>
+		
+		
+		</nav>
+		
+	</div>	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenLite.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TimelineMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/easing/EasePack.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/CSSPlugin.min.js"></script>
+</body>
+</html>
